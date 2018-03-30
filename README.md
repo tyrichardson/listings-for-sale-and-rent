@@ -9,7 +9,7 @@ You job is to get this data onto the DOM. Use client side routing (`angular-rout
 ## Project Requirements
 
 - [ ] Create a Full Stack application from the ground up using Angular, Node, Express, and SQL (SEAN stack)
-      - [ ] install npm packages
+      - [x] install npm packages
       - [x] create project file structure
       - [x] create project files
 - [x] Work with the data set that we have provide for you
