@@ -23,11 +23,10 @@ You will need import the *listings.sql* file into your database. Either import t
 
 - [ ] Ability to delete an existing listings
 - [ ] Move all `$http` requests to an Angular Service
-- [ ] Add an option to include an image path (absolute url) for each listing
 
 ## Stretch Goals
 
+- [ ] Add an option to include an image path (absolute url) for each listing
 - [ ] Ability to update an existing record using a pop up (modal). You will need to research libraries that support modals (AngularJS Material has this capabitlity)
 - [ ] Display the least expensive property featured prominently at the top of the page
 - [ ] Ability to search or filter by various parameters (try doing this using a server side route with a query parameter)
-- [ ] Ability to upload photos using [Filestack](https://www.filestack.com/)
