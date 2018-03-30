@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Real Estate Listings</title>
+  <script src="vendors/angular.min.js"></script>
+  <script src="vendors/angular-route.min.js"></script>
+  <script src="scripts/client.js"></script>
+  <script src="scripts/services/listing.service.js"></script>
+  <script src="scripts/controllers/rent.controller.js"></script>
+  <script src="scripts/controllers/sale.controller.js"></script>
+  <link rel="stylesheet" type="text/html" href="styles/styles.css">
+</head>
+
+<body ng-app="ListingApp">
+  <div>
+    <div ng-include=" '/views/templates/nav.html' "></div>
+    <main ng-view>
+      <!-- HTML GOES HERE -->
+      TEST
+    </main>
+  </div>
+</body>
+
+</html>

@@ -9,14 +9,18 @@ You job is to get this data onto the DOM. Use client side routing (`angular-rout
 ## Project Requirements
 
 - [ ] Create a Full Stack application from the ground up using Angular, Node, Express, and SQL (SEAN stack)
-- [ ] Work with the data set that we have provide for you
-- [ ] Account for the different data properties ("rent" versus "sale") and ensure that this is noted on the display of the information, by listing "For Rent" or "For Sale" based on which of the two properties that it has.
+      - [ ] install npm packages
+      - [x] create project file structure
+      - [x] create project files
+- [x] Work with the data set that we have provide for you
+      - [x] create listings table in hadar db on postgres using postico
+- [ ] Account for the different data properties (TYPE IS COLUMN NAME IN DB for "rent" versus "sale") and ensure that this is noted on the display of the information, by listing "For Rent" or "For Sale" based on which of the two properties that it has
 - [ ] 2 routes, each with a controller and template file. One set for "For Rent" properties and another set for "For Sale" properties
 - [ ] Create an interface for adding additional rental or housing properties to the collection(s). You will need to give the user an option for either a Rent property, or a Sale property
 
 ## Importing the Provided Data File
 
-You will need import the *listings.sql* file into your database. Either import the file or copy and paste all of the queries into Postico.
+- [x] You will need import the *listings.sql* file into your database. Either import the file or copy and paste all of the queries into Postico.
 
 
 ## Hard Mode

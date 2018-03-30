@@ -1,0 +1,9 @@
+<section>
+  <div ng-repeat="rental in vm.rent.list" class="rental">
+    <p>{{rental.city}}</p>
+    <p>{{rental.sqft}}</p>
+    <p>{{rental.cost}}</p>
+
+    <button ng-click="vm.addRental(rental)">Add Rental</button>
+  </div>
+</section>

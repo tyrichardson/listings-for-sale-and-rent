@@ -1,0 +1,9 @@
+<section>
+  <div ng-repeat="sale in vm.sale.list" class="sale">
+    <p>{{sale.city}}</p>
+    <p>{{sale.sqft}}</p>
+    <p>{{sale.cost}}</p>
+
+    <button ng-click="vm.addSale(sale)"></button>
+  </div>
+</section>
