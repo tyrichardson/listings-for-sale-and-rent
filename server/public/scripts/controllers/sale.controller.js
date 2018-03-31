@@ -10,4 +10,5 @@ listingApp.controller('SaleController', ['ListingService',
 
     //Link view function calls to functions in service
     self.addSale = listingService.addSale;
+    self.getSale = listingService.getSale;
   }]);

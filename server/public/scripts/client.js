@@ -5,6 +5,7 @@ const listingApp = angular.module('ListingApp', ['ngRoute']);
 listingApp.config(function($routeProvider){
   console.log('listingApp config in client.js loaded');
 
+//using nav.html, determines which content to display on DOM  
 $routeProvider
 .when('/rent', {
   templateUrl: '/views/rent.html',
