@@ -1,8 +1,30 @@
-<section>
-  <div ng-repeat="sale in vm.sale.list" class="sale">
-    <p>{{sale.city}}</p>
-    <p>{{sale.sqft}}</p>
-    <p>{{sale.cost}}</p>
-    <button ng-click="vm.addSale(sale)"></button>
-  </div>
-</section>
+<h3>Add a property that is for sale</h3>
+
+<div>
+  <input type="text" ng-model="vm.newSale.city" placeholder="City"></input>
+  <input type="text" ng-model="vm.newSale.sqft" placeholder="sqft"></input>
+  <input type="number" ng-model="vm.newSale.cost" placeholder="cost"></input>
+  <button ng-click="vm.addSale(vm.newSale)">ADD SALE</button>
+</div>
+
+<br>
+
+  <h3>Properties available for sale</h3>
+<div ng-repeat="sale in vm.sale.list" class="sale">
+  <table>
+    <thead>
+      <tr>
+        <th>CITY</th>
+        <th>SQFT</th>
+        <th>COST</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{sale.city}}</td>
+        <td>{{sale.sqft}}</td>
+        <td>{{sale.cost}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

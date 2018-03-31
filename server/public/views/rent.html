@@ -1,9 +1,30 @@
-<section>
-  <div ng-repeat="rental in vm.rent.list" class="rental">
-    <p>{{rental.city}}</p>
-    <p>{{rental.sqft}}</p>
-    <p>{{rental.cost}}</p>
 
-    <button ng-click="vm.addRental(rental)">Add Rental</button>
+    <h3>Add a property that is for rent</h3>
+
+    <div>
+    <input type="text" ng-model="vm.newRental.city" placeholder="City"></input>
+    <input type="text" ng-model="vm.newRental.sqft" placeholder="sqft"></input>
+    <input type="number" ng-model="vm.newRental.cost" placeholder="cost"></input>
+    <button ng-click="vm.addRental(vm.newRental)">ADD RENTAL</button>
   </div>
-</section>
+  <br>
+          <h3>Properties available for rent</h3>
+  <div ng-repeat="rental in vm.rental.list" class="rental">
+      <table>
+        <thead>
+           <tr>
+             <th>CITY</th>
+             <th>SQFT</th>
+             <th>COST</th>
+           </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{rental.city}}</td>
+            <td>{{rental.sqft}}</td>
+            <td>{{rental.cost}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
