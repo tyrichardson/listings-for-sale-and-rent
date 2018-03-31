@@ -2,11 +2,13 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 let port = process.env.PORT || 5000;
-const listingRouter = require('./routes/listing.router');
+const rentRouter = require('./routes/rent.router');
+const saleRouter = require('./routes/sale.router');
 
 app.use(bodyParser.json());
 
-app.use('/listing', listingRouter);
+app.use('/rent', rentRouter);
+app.use('/sale', saleRouter);
 
 app.use(express.static('server/public'));
 

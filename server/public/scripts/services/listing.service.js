@@ -6,7 +6,8 @@ listingApp.service('ListingService', ['$http', function($http) {
 
   self.rental = { list: [] };
 
-  self.sale = { list: []};
+  self.sale = { list: [] };
+
 
   //GET rental
   self.getRental = function(){

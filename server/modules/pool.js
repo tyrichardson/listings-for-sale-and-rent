@@ -2,7 +2,7 @@
 const pg = require('pg');
 const Pool = pg.Pool;
 const config = {
-  database: 'listings',
+  database: 'hadar',
   host: 'localhost',
   port: 5432,
   max: 7,
@@ -16,7 +16,7 @@ pool.on('connect', (client) => {
 });
 
 pool.on('error', (error, client) => {
-  console.log('unexpected erro on postgres', error);
+  console.log('unexpected error on postgres', error);
   process.exit(-1);
 });
 
