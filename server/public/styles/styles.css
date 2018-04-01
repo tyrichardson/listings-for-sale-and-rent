@@ -1,19 +1,41 @@
-ul {
-  background-color: red
-}
-
-h2 {
-  color: green
-}
-
 body {
-  background-color:lightgrey
+  background-color: floralwhite
 }
 
-li  {
-  color: blue
-  float: left;
-  list-style-type: none;
-  padding: 10px;
-  border: 10px;
+nav, .input, .header3 {
+  background-color: thistle
+}
+
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  width: 50%;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:hover {
+  background-color: thistle;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(255, 241, 185);
+  color: thistle;
 }

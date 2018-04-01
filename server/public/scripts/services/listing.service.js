@@ -9,7 +9,7 @@ listingApp.service('ListingService', ['$http', function($http) {
   self.sale = { list: [] };
 
 
-  //GET
+  //GET rent
   self.getRent = function() {
     console.log('called getRent function in listing.service');
     $http.get('/rent').then(function(response) {
