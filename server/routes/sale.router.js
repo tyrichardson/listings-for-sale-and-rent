@@ -1,8 +1,9 @@
+//router out to database
 const pool = require('../modules/pool.js');
 let express = require('express');
 let router = express.Router();
 
-//GET
+//GET sale
 router.get('/', (req, res) => {
   let queryText = "SELECT * FROM listings WHERE type ILIKE 'sale';";
   pool.query(queryText)
@@ -15,7 +16,7 @@ router.get('/', (req, res) => {
     });
 });
 
-//POST
+//POST sale
 router.post('/', (req, res) => {
   const queryText = "INSERT INTO listings (city, sqft, cost, type) VALUES ($1, $2, $3, $4);"
   pool.query(queryText, [req.body.city, req.body.sqft, req.body.cost, req.body.type])
