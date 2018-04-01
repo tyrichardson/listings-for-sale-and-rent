@@ -5,3 +5,14 @@ ul {
 h2 {
   color: green
 }
+
+body {
+  background-color: bisque
+}
+
+li  {
+  float: left;
+  list-style-type: none;
+  padding: 10px;
+  border: 10px;
+}
