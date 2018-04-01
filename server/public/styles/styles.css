@@ -1,5 +1,5 @@
 ul {
-  background-color: rgb(205, 112, 50)
+  background-color: red
 }
 
 h2 {
@@ -7,10 +7,11 @@ h2 {
 }
 
 body {
-  background-color: bisque
+  background-color:lightgrey
 }
 
 li  {
+  color: blue
   float: left;
   list-style-type: none;
   padding: 10px;

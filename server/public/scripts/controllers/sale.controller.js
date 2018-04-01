@@ -1,6 +1,7 @@
 listingApp.controller('SaleController', ['ListingService',
   function (ListingService) {
     console.log('Sale Controller Loaded')
+
     let self = this;
 
     let listingService = ListingService;
@@ -11,4 +12,6 @@ listingApp.controller('SaleController', ['ListingService',
     //Link view function calls to functions in service
     self.addSale = listingService.addSale;
     self.getSale = listingService.getSale;
+
+    self.getSale();
   }]);

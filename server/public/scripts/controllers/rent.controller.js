@@ -9,6 +9,8 @@ listingApp.controller('RentController', ['ListingService',
     self.rent = listingService.rent;
 
     //Link view function calls to functions in service
-    self.addRental = listingService.addRental;
-    self.getRental = listingService.getRental;
+    self.addRent = listingService.addRent;
+    self.getRent = listingService.getRent;
+
+    self.getRent();
   }]);

@@ -2,9 +2,9 @@ const pool = require('../modules/pool.js');
 let express = require('express');
 let router = express.Router();
 
-// //GET sale
+//GET
 router.get('/', (req, res) => {
-  let queryText = 'SELECT * FROM hadar;';
+  let queryText = 'SELECT * FROM hadar WHERE type ILIKE \'sale\';';
   pool.query(queryText)
     .then((result) => {
       res.send(result.rows);
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     });
 });
 
-//POST sale
+//POST
 router.post('/', (req, res) => {
   const queryText = 'INSERT INTO hadar (city, sqft, cost, type) VALUES ($1, $2, $3, $4)';
   pool.query(queryText, [req.body.city, req.body.sqft, req.body.cost, req.body.type])

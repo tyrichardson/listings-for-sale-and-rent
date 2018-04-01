@@ -4,49 +4,51 @@ listingApp.service('ListingService', ['$http', function($http) {
 
   let self = this;
 
-  self.rental = { list: [] };
+  self.rent = { list: [] };
 
   self.sale = { list: [] };
 
 
-  //GET rental
-  self.getRental = function(){
-    console.log('called getRental function in service');
+  //GET
+  self.getRent = function() {
+    console.log('called getRent function in listing.service');
     $http.get('/rent').then(function(response) {
-      self.rental.list = response.data;
+      console.log('rent get response listing.service', response),
+      self.rent.list = response.data;
     })
   }
 
   //GET sale
   self.getSale = function () {
-    console.log('called getSale function in service');
+    console.log('called getSale function in listing.service');
     $http.get('/sale').then(function(response) {
+      console.log('sale get response listing.service', response);
       self.sale.list = response.data;
     })
   }
 
-  //POST rental
-  self.addRental = function (rental) {
-    console.log('called add rental', rental)
+  //POST rent
+  self.addRent = function (rent) {
+    console.log('called add rent post listing.service', rent)
 
-    $http.post('/rent', rental).then(function (response) {
-      console.log('Rental Successfully Posted!');
-      self.getRental();
+    $http.post('/rent', rent).then(function (response) {
+      console.log('Rent Successfully Posted says listing.service!');
+      self.getRent();
     }).catch(function (error) {
-      console.log('ERROR IN POST', error)
+      console.log('ERROR IN rent POST says listing.service', error)
     });
   };
 
 
   //POST sale
   self.addSale = function (sale) {
-    console.log('called add sale', sale)
+    console.log('called add sale post', sale)
 
     $http.post('/sale', sale).then(function (response) {
-      console.log('Sale Successfully Posted!');
+      console.log('Sale Successfully Posted says  listing.service!');
       self.getSale();
     }).catch(function (error) {
-      console.log('ERROR IN POST', error)
+      console.log('ERROR IN sale POST says listing.service', error)
     });
   };
 

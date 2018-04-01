@@ -1,16 +1,19 @@
 <br><br>
+
     <h3>For Rent: add a listing</h3>
 
+              <!-- the POST -->
     <div>
-    <input type="text" ng-model="vm.newRental.city" placeholder="City"></input>
-    <input type="text" ng-model="vm.newRental.sqft" placeholder="sqft"></input>
-    <input type="number" ng-model="vm.newRental.cost" placeholder="cost"></input>
-    <input type="text" ng-model="vm.newRental.type" placeholder="rent"></input>
-    <button ng-click="vm.addRental(vm.newRental)">ADD RENTAL</button>
+    <input type="text" ng-model="vm.newRent.city" placeholder="City"></input>
+    <input type="text" ng-model="vm.newRent.sqft" placeholder="sqft"></input>
+    <input type="number" ng-model="vm.newRent.cost" placeholder="cost"></input>
+    <input type="text" ng-model="vm.newRent.type" placeholder="rent"></input>
+    <button ng-click="vm.addRent(vm.newRent)">ADD RENTAL</button>
   </div>
   <br>
           <h3>Rental Listings</h3>
-  <div ng-repeat="rental in vm.rental.list" class="rental">
+          <!-- the GET -->
+  <div ng-repeat="rental in vm.rent.list" class="rent">
       <table>
         <thead>
            <tr>

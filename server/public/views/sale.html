@@ -1,7 +1,7 @@
 <br><br>
 
 <h3>For Sale: add a listing</h3>
-
+          <!-- the POST -->
 <div>
   <input type="text" ng-model="vm.newSale.city" placeholder="City"></input>
   <input type="text" ng-model="vm.newSale.sqft" placeholder="sqft"></input>
@@ -12,6 +12,7 @@
 
 <br>
 
+          <!-- the GET -->
   <h3>For Sale Listings</h3>
 <div ng-repeat="sale in vm.sale.list" class="sale">
   <table>
