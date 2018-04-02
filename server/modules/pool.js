@@ -1,8 +1,10 @@
 //PG Config setup; controls connection and sessions with database
 const pg = require('pg');
 const Pool = pg.Pool;
-//const pool = require('../modules/pool.js');
+const pool = require('../modules/pool.js');
 const url = require('url');
+const pool = new Pool(config);
+module.exports = new pg.Pool(config);
 
 if (process.env.DATABASE_URL) {
   // Heroku gives a url, not a connection object
@@ -35,7 +37,7 @@ const config = {
   };
 }
 
-const pool = new Pool(config);
+
 
 pool.on('connect', (client) => {
   console.log('postgres connected');
