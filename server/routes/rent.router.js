@@ -1,4 +1,4 @@
-//router out to database
+//router out to database  
 const pool = require('../modules/pool.js');
 let express = require('express');
 let router = express.Router();
