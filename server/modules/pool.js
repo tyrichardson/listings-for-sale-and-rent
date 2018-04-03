@@ -1,10 +1,7 @@
-//PG Config setup; controls connection and sessions with database
 const pg = require('pg');
-const Pool = pg.Pool;
-const pool = require('../modules/pool.js');
 const url = require('url');
-const pool = new Pool(config);
-module.exports = new pg.Pool(config);
+const config = {};
+const pool = require('../modules/pool.js');
 
 if (process.env.DATABASE_URL) {
   // Heroku gives a url, not a connection object
@@ -12,16 +9,16 @@ if (process.env.DATABASE_URL) {
   let params = url.parse(process.env.DATABASE_URL);
   let auth = params.auth.split(':');
 
-const config = {
-  user: auth[0],
-  password: auth[1],
-  host: params.hostname,
-  port: params.port,
-  database: params.pathname.split('/') [1],
-  ssl: true, // heroku requires ssl to be true
-  max: 10, // max number of clients in the pool
-  idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
-};
+  config = {
+    user: auth[0],
+    password: auth[1],
+    host: params.hostname,
+    port: params.port,
+    database: params.pathname.split('/')[1],
+    ssl: true, // heroku requires ssl to be true
+    max: 10, // max number of clients in the pool
+    idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
+  };
 
 } else {
   // only change the things on the right side of the ||
@@ -30,22 +27,10 @@ const config = {
     password: process.env.DATABASE_SECRET || null, //env var: PGPASSWORD
     host: process.env.DATABASE_SERVER || 'localhost', // Server hosting the postgres database
     port: process.env.DATABASE_PORT || 5432, //env var: PGPORT
-    database: process.env.DATABASE_NAME || 'hadar',
-    //  above is the env var: PGDATABASE or the name of your database (e.g. database: process.env.DATABASE_NAME || 'koala_holla',)
+    database: process.env.DATABASE_NAME || 'hadar', //env var: PGDATABASE or the name of your database (e.g. database: process.env.DATABASE_NAME || 'koala_holla',)
     max: 10, // max number of clients in the pool
     idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
   };
 }
 
-
-
-pool.on('connect', (client) => {
-  console.log('postgres connected');
-});
-
-pool.on('error', (error, client) => {
-  console.log('unexpected error on postgres', error);
-  process.exit(-1);
-});
-
-module.exports = pool;
+module.exports = new pg.Pool(config);
