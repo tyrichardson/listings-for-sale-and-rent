@@ -1,10 +1,12 @@
-# Weekend Challenge 4 - Angular, Node, Express & SQL
+REAL ESTATE LISTINGS
 
-Welcome to weekend challenge 4! This weekend, you will take on the role of an application developer for a real estate company. You will be working with data that we will be providing to you. After importing the data (instructions below), you will find information for properties that are either for "rent" or for "sale".
+Tech to use: Angular, Node, Express & SQL
 
-You job is to get this data onto the DOM. Use client side routing (`angular-route`) to display the rentals on one view and listings for purchase on another view. There should be two navigation links on the page allowing the user to switch between the two views. Optionally, bring AngularJS Material for styling the page.
+Properties are either for "rent" or for "sale".
 
-> NOTE: Deploying to Heroku is **not** required for this assignment. We will cover deployment with SQL next week.
+Goal:use client side routing (`angular-route`) to display the rentals on one view and listings for purchase on another view. 
+
+Requires two navigation links on the page allowing the user to switch between the two views.
 
 ## Project Requirements
 
@@ -22,15 +24,11 @@ You job is to get this data onto the DOM. Use client side routing (`angular-rout
 
 - [x] You will need import the *listings.sql* file into your database. Either import the file or copy and paste all of the queries into Postico.
 
-
-## Hard Mode
+For future iterations:
 
 - [ ] Ability to delete an existing listings
 - [ ] Move all `$http` requests to an Angular Service
-
-## Stretch Goals
-
 - [ ] Add an option to include an image path (absolute url) for each listing
-- [ ] Ability to update an existing record using a pop up (modal). You will need to research libraries that support modals (AngularJS Material has this capabitlity)
+- [ ] Ability to update an existing record using a pop up (modal).
 - [ ] Display the least expensive property featured prominently at the top of the page
-- [ ] Ability to search or filter by various parameters (try doing this using a server side route with a query parameter)
+- [ ] Ability to search or filter by various parameters using a server side route with a query parameter
