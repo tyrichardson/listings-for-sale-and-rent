@@ -1,10 +1,10 @@
 REAL ESTATE LISTINGS
 
-Tech to use: Angular, Node, Express & SQL
+Tech to use: AngularJS, Material, Node/Express & PostgreSQL
 
 Properties are either for "rent" or for "sale".
 
-Goal:use client side routing (`angular-route`) to display the rentals on one view and listings for purchase on another view. 
+Goal: use client side routing (`angular-route`) to display the rentals on one view and listings for purchase on another view. 
 
 Requires two navigation links on the page allowing the user to switch between the two views.
 
@@ -26,9 +26,9 @@ Requires two navigation links on the page allowing the user to switch between th
 
 For future iterations:
 
-- [ ] Ability to delete an existing listings
-- [ ] Move all `$http` requests to an Angular Service
-- [ ] Add an option to include an image path (absolute url) for each listing
+- [x] Ability to delete an existing listings
+- [x] Move all `$http` requests to an Angular Service
+- [x] Add an option to include an image path (absolute url) for each listing
 - [ ] Ability to update an existing record using a pop up (modal).
 - [ ] Display the least expensive property featured prominently at the top of the page
 - [ ] Ability to search or filter by various parameters using a server side route with a query parameter
