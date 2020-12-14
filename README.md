@@ -29,6 +29,3 @@ For future iterations:
 - [x] Ability to delete an existing listings
 - [x] Move all `$http` requests to an Angular Service
 - [x] Add an option to include an image path (absolute url) for each listing
-- [ ] Ability to update an existing record using a pop up (modal).
-- [ ] Display the least expensive property featured prominently at the top of the page
-- [ ] Ability to search or filter by various parameters using a server side route with a query parameter
