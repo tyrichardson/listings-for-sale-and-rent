@@ -17,7 +17,7 @@ listingApp.service('ListingService', ['$http', function($http) {
       self.rent.list = response.data;
     })
   }
-m
+
   //GET sale
   self.getSale = function () {
     console.log('called getSale function in listing.service');
